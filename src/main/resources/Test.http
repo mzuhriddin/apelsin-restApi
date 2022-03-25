@@ -1,0 +1,58 @@
+GET http://localhost:80/api/customer
+
+###
+GET http://localhost:80/api/customer/1
+
+###
+POST http://localhost:80/api/customer
+Content-Type: application/json
+
+{
+  "name": "Avaz",
+  "country": "Uzb",
+  "address": "olmazor",
+  "phone": "12345678"
+}
+
+###
+PUT http://localhost:80/api/customer/1
+Content-Type: application/json
+
+{
+  "name": "Abbos",
+  "country": "Kgz",
+  "address": "O'sh",
+  "phone": "765432"
+}
+
+###
+DELETE http://localhost:80/api/customer/1
+
+
+
+###
+GET http://localhost:80/api/order
+
+###
+GET http://localhost:80/api/order/1
+
+###
+POST http://localhost:80/api/order
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "details": [
+    {
+      "quantity": 8,
+      "productId": 2
+    }
+  ],
+  "due": "2022-05-05"
+}
+
+###
+DELETE http://localhost:80/api/order/1
+
+
+
